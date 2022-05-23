@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=https://skibble.notion.site/Week-1-HTML-dfb30d490f294dcc9f034c830bd6f948, initial-scale=1.0"
+    />
+    <title>Forms</title>
+  </head>
+  <body>
+    <div>
+      <div class="video-container">
+        <video id="video" width="400">
+          <source src="media/mov_bbb.mp4" type="video/mp4" />
+          Your browser does not support HTML video.
+        </video>
+        <div class="controls">
+          <span id="play" onclick="play_video(this)">Play</span>
+          <span onclick="stop_video()">Stop</span>
+        </div>
+      </div>
+    </div>
+    <script>
+      var videoElem = document.getElementById("video");
+      var playElem = document.getElementById("play");
+      videoElem.addEventListener("ended", myHandler, false);
+      function myHandler(e) {
+        playElem.innerHTML="Play"
+      }
+      function play_video(elem) {
+        if (videoElem.paused) {
+          videoElem.play();
+          elem.innerHTML = "Pause";
+        } else {
+          videoElem.pause();
+          elem.innerHTML = "Play";
+        }
+      }
+
+      function stop_video() {
+        videoElem.pause();
+        videoElem.currentTime = 0;
+        playElem.innerHTML = "Play";
+      }
+    </script>
+    <style>
+      body {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: "Courier New", Courier, monospace;
+      }
+      video {
+        width: 90vw;
+        box-shadow: 0px 0px 30px 10px #999;
+      }
+      .controls {
+        margin-top: -60px;
+        height: 40px;
+        background-color: rgb(0, 0, 0, 0.8);
+        position: relative;
+        z-index: 1;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+      }
+      .controls span {
+        padding: 3px 20px;
+        border: 1px solid #fff;
+        margin-right: 10px;
+        border-radius: 6px;
+        user-select: none;
+        cursor: pointer;
+      }
+      .controls span:hover {
+        background-color: #fff;
+        color: #333;
+      }
+    </style>
+  </body>
+</html>

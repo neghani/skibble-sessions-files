@@ -1,0 +1,30 @@
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  border: 1px solid;
+  align-items: center;
+  height: 300px;
+  align-content: flex-start;
+  gap: 2px;
+}
+.item {
+  padding: 40px;
+  background-color: green;
+  color: white;
+}
+.item1 {
+    flex: 1;
+}
+.item2 {
+    flex-shrink: 1;
+
+}
+.item3 {
+    flex-shrink: 1;
+
+}

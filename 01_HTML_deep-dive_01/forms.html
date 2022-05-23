@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    
+    <form action="login.php" method="get">
+      
+      <fieldset>
+        <legend>Signup Form</legend>
+        <label>Username:</label>
+        <input type="number"  required> <label>Password:</label>
+        <input type="password" required name="password" placeholder="Enter password" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Personal information</legend>
+        <label> Gender:</label> 
+        <input type="radio" name="gender" required value="male" id="male" /> <label for="male"> Male</label> 
+        <input type="radio" name="gender"  required value="female"  id="female" /> <label for="female"> Female</label> 
+        <input type="radio" name="gender" required  value="other" /><label> Other</label> 
+    <br/>
+        <label> Qualification:</label> 
+        <input type="checkbox" required name="qualification" value="school"  /> <label> School</label> 
+        <input type="checkbox" required disabled name="qualification" value="hScholl"  /> <label> Higher</label> 
+        <input type="checkbox" required name="qualification"  value="college" /><label> College</label> 
+
+  <div>
+    <label> State:</label> 
+    <select  name="state">
+        <optgroup label="southern states">
+            <option value="ts">Telangana</option>
+            <option value="ap">Andhra pradesh </option>
+        </optgroup>
+        <optgroup label="EASTERN states">
+        <option  value="asm">Assam</option>
+        <option value="uo">Uttar Pradesh</option>
+    </optgroup>
+       </select>
+  </div>
+    </fieldset>
+    <label>Describe Yourself:</label><br/>
+    <textarea name="bio" id="bio" cols="30" rows="5"></textarea>
+<br/>
+    <input disabled type="text" placeholder="Choose your flavour" list="ice-cream-flavors" />
+   
+    <datalist  id="ice-cream-flavors">
+        <option value="Chocolate"> Chocolate</option>
+        <option value="Coconut">Coconut</option>
+        <option value="Mint">Mint</option>
+        <option value="Strawberry">Strawberry</option>
+        <option value="Vanilla">Vanilla</option>
+      </datalist>
+
+      
+
+      <input type="submit" />
+    </form>
+
+    <style>
+       
+    </style>
+  </body>
+</html>

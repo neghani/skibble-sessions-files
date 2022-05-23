@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <p class="student-name">Ganesh 1</p>
+      <input type="password" minlength="8" pattern="[a-zA-Z0-9\s]+" />
+      <p>a</p>
+      <input type="email" required placeholder="Enter email" />
+      <input
+        type="number"
+        min="1"
+        max="5"
+        required
+        placeholder="Enter above hundred"
+      />
+
+      <input
+        type="number"
+        min="1"
+        max="5"
+        required
+        placeholder="Enter above hundred"
+      />
+      <input type="submit" />
+
+      <p class="student-name">Ganesh 1</p>
+      <p>Ganesh 1</p>
+      <p class="student-name">Ganesh 1</p>
+      <p class="student-name">Ganesh 1</p>
+      <p class="student-name">Ganesh 1</p>
+    </form>
+
+    <!-- <button class="btn">Save me</button>
+    <a class="btn" href="http://www.google.com">Google</a>
+    <a class="btn" href="http://www.facebook.com">facebook</a>
+    <a class="btn" href="http://www.twitter.com">twitter</a> -->
+
+    <style>
+      p:not(.student-name) {
+        color: red;
+      }
+      p:first-of-type {
+        font-size: 30px;
+      }
+      input[type="email"]:required,
+      input[type="number"]:in-range {
+        font-size: 30px;
+      }
+      input[type="email"]:invalid {
+        border-color: red;
+      }
+      input[type="number"]:invalid {
+        border-color: red;
+      }
+      /* input[type="email"]:invalid::after {
+        content: "Please enter email only";
+        border-color: red;
+      } */
+      .btn {
+        all: unset;
+        padding: 10px 60px;
+        background: #f4f4f4;
+        border: 1px solid #e4e4e4;
+        list-style: 21px;
+        border-radius: 6px;
+      }
+      .btn:hover {
+        background: #5c5c5c;
+        color: white;
+      }
+      .btn:active {
+        background: #7b7b7b;
+        color: white;
+      }
+      .btn:visited {
+        background: #a10b0b;
+        color: white;
+      }
+      .btn:disabled {
+        opacity: 0.6;
+        pointer-events: none;
+      }
+      .btn:link {
+        background: #04048e;
+        color: white;
+        border: 1px solid #e4e4e4;
+      }
+    </style>
+  </body>
+</html>

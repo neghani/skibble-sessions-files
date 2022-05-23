@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Selector</title>
+  </head>
+  <body>
+  
+    <div>
+      <p>item 1</p>
+      <p>item 2</p>
+      <p>item 2</p>
+      <p>item 3</p>
+      <p>item 4</p>
+      <p>item 1</p>
+      <p>item 2</p>
+      <p>item 2</p>
+      <p>item 3</p>
+      <p>item 4</p>
+      <p>item 1</p>
+      <p>item 2</p>
+      <p>item 2</p>
+      <p>item 3</p>
+      <p>item 4</p>
+    </div>
+    <p>this paragraph does have a slibling div</p>
+
+    <style>
+      div p:nth-child(odd){
+          color: red;
+      }
+      div p:nth-child(even){
+          color: green;
+      }
+      div p:nth-child(3n){
+          font-size: 30px;
+          font-weight: bolder;
+      }
+    </style>
+  </body>
+</html>

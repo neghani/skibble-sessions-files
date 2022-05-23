@@ -1,0 +1,27 @@
+.container {
+    padding: 0px 20px;
+    .row {
+      margin: 0px -10px;
+      .button {
+          display: flex;
+          align-items: center;
+        justify-content:center;
+      width:330px;
+        text-align:center;
+          background-color:red;
+        span.icon-animated {
+          color: black;
+          transition: all 250ms;
+          font-size: 48px;
+          height: 48px;
+          width: 48px;
+        }
+        &:hover {
+          span.icon-animated {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+  

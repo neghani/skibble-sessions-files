@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+  </head>
+  <body>
+    <div class="gallery">
+      <div class="photo">
+        <img
+          src="https://live.staticflickr.com/7364/27653319031_bed3f71b48_k.jpg"
+        />
+      </div>
+      <div class="photo">
+        <img
+          src="https://live.staticflickr.com/591/22215721055_e8ecd35c16_k.jpg"
+        />
+      </div>
+      <div class="photo">
+        <img
+          src="https://live.staticflickr.com/7364/27653319031_bed3f71b48_k.jpg"
+        />
+      </div>
+      <div class="photo">
+        <img
+          src="https://live.staticflickr.com/7364/27653319031_bed3f71b48_k.jpg"
+        />
+      </div>
+      <div class="photo">
+        <img
+          src="https://live.staticflickr.com/7364/27653319031_bed3f71b48_k.jpg"
+        />
+      </div>
+      <div class="photo">
+        <img
+          src="https://live.staticflickr.com/7364/27653319031_bed3f71b48_k.jpg"
+        />
+      </div>
+    </div>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .gallery {
+        display: flex;
+        height: 90vh;
+      }
+      .photo {
+        overflow: hidden;
+        width: 64px;
+        margin: 0px 8px;
+        border-radius: 32px;
+        transition: width 250ms;
+      }
+      .photo img {
+        object-fit: cover;
+      }
+      .photo:hover {
+        width: 40vw;
+      }
+    </style>
+  </body>
+</html>
