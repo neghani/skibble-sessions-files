@@ -53,24 +53,43 @@ function undoDelete() {
   allTodos[0].addToView();
 }
 
-async function startTheApp(link="https://api.themoviedb.org/3/movie/now_playing?api_key=aa0456e75f0edfa414c490da77f7ef48&language=en-US&page=1") {
+async function loadData(link) {
   try {
     const options = {
       method: "GET",
     };
-    
-    fetch(
-      link,
-      options
-    )
-      .then((response) => response.json())
-      .then((response) => console.log(response))
-      .catch((err) => console.error(err));
+    const res = await fetch(link);
+    const data = await res.json();
+    return await data;
   } catch (error) {
     console.log(
       "I have failed to load the todo from server please create your own"
     );
   }
 }
-startTheApp("https://api.themoviedb.org/3/movie/628900?api_key=aa0456e75f0edfa414c490da77f7ef48&language=en-US");
+async function loadAmovie(id) {
+  var allMovies = await loadData(
+    "https://api.themoviedb.org/3/movie/now_playing?api_key=aa0456e75f0edfa414c490da77f7ef48&language=en-US&page=1"
+  );
+  console.log(allMovies)
+  allMovies.results.forEach((element) => {
+    let newMovie = document.createElement("img");
+    newMovie.src =
+      "https://www.themoviedb.org/t/p/w220_and_h330_face/" +
+      element.backdrop_path;
+    // newMovie.onclick = async () => {
+    //   const fullDetailsMovie = await fullDetails(element.id);
 
+    //   document.body.innerHTML = fullDetailsMovie.original_title;
+    //   console.log(fullDetailsMovie);
+    // };
+
+    document.body.appendChild(newMovie);
+  });
+}
+
+// async function fullDetails(movieId) {
+//   return await loadData(
+//     `https://api.themoviedb.org/3/movie/${movieId}?api_key=aa0456e75f0edfa414c490da77f7ef48&language=en-US`
+//   );
+// }
