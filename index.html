@@ -1,0 +1,11 @@
+<script>
+  async function loadData() {
+    const options = {
+      method: "GET",
+    };
+    const res = await fetch("http://localhost:3000/getTodos");
+    const data = await res.json();
+    console.log(data);
+  }
+  loadData();
+</script>
