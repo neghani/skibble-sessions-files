@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo</title>
   </head>
-  <body>
-    <button onclick="undoDelete()">Undo</button>
+  <body onload="loadTodo()">
+
     <input type="text" id="newTodo" />
     <button onclick="saveTodo()">Add Todo</button>
     <ul id="todos"></ul>
 
-    <button onclick="loadAmovie('628901')">Load a movie</button>
+  
     <script src="app.js"></script>
   </body>
 </html>

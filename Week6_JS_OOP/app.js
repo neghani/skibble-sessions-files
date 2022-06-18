@@ -9,13 +9,7 @@ class Todo {
     this.done = false;
     this.addToView();
   }
-  saveTheTodo() {
-    // let existingData = localStorage.getItem("todo");
-    // existingData = existingData
-    //   ? existingData + " |!@ " + this.text
-    //   : this.text;
-    // localStorage.setItem("todo", existingData);
-  }
+  saveTheTodo() {}
   addToView() {
     this.newElem = document.createElement("li");
     this.newElem.innerHTML = this.text;
@@ -44,52 +38,28 @@ class Todo {
 }
 var allTodos = [];
 
-function saveTodo() {
+async function saveTodo() {
   let todoText = document.querySelector("#newTodo").value;
-  allTodos.push(new Todo(todoText, todoContainer, false));
+  const link = "http://localhost:3000/todo";
+  const postSetting = {
+    method: "post",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ text: todoText, done: false }),
+  };
+  const postTodoRes = await fetch(link, postSetting);
+  const data = await postTodoRes.json();
+  loadTodo();
 }
 
-function undoDelete() {
-  allTodos[0].addToView();
-}
-
-async function loadData(link) {
-  try {
-    const options = {
-      method: "GET",
-    };
-    const res = await fetch(link);
-    const data = await res.json();
-    return await data;
-  } catch (error) {
-    console.log(
-      "I have failed to load the todo from server please create your own"
-    );
-  }
-}
-async function loadAmovie(id) {
-  var allMovies = await loadData(
-    "https://api.themoviedb.org/3/movie/now_playing?api_key=aa0456e75f0edfa414c490da77f7ef48&language=en-US&page=1"
-  );
-  console.log(allMovies)
-  allMovies.results.forEach((element) => {
-    let newMovie = document.createElement("img");
-    newMovie.src =
-      "https://www.themoviedb.org/t/p/w220_and_h330_face/" +
-      element.backdrop_path;
-    // newMovie.onclick = async () => {
-    //   const fullDetailsMovie = await fullDetails(element.id);
-
-    //   document.body.innerHTML = fullDetailsMovie.original_title;
-    //   console.log(fullDetailsMovie);
-    // };
-
-    document.body.appendChild(newMovie);
+async function loadTodo() {
+  todoContainer.innerHTML = "";
+  const link = "http://localhost:3000/todo";
+  const res = await fetch(link);
+  const data = await res.json();
+  data.forEach((element) => {
+    new Todo(element.text, todoContainer, true);
   });
 }
-
-// async function fullDetails(movieId) {
-//   return await loadData(
-//     `https://api.themoviedb.org/3/movie/${movieId}?api_key=aa0456e75f0edfa414c490da77f7ef48&language=en-US`
-//   );
-// }
