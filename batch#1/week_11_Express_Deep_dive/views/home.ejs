@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Example App</title>
+  </head>
+  <body>
+
+   <% if (!data) { %>
+        
+    <ul>
+      <% data.forEach(function(elem){ %>
+
+      <li>
+        <%= elem.task %> <input type="checkbox" checked="<%= elem.done %>" />
+      </li>
+
+      <% }); %>
+
+      <% } %>
+    </ul>
+  </body>
+</html>

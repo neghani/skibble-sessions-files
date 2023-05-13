@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="canvas">
+      <div class="container">
+        <div class="box logo">Logo</div>
+        <div class="box nav">
+          <a href="">asdf</a><a href="">asdf</a><a href="">asdf</a
+          ><a href="">asdf</a>
+        </div>
+        <div class="box social">Social link</div>
+      </div>
+     
+    </div>
+
+    <style>
+      .canvas {
+        width: 90vw;
+        background-color: burlywood;
+        height: 90vh;
+        border: 1px solid rgb(124, 98, 98);
+      }
+      .box {
+        padding: 20px;
+        background-color: white;
+        border: 1px solid #e4e4e4;
+      }
+      .container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        /* gap: 10px 30px; */
+      }
+      .nav{
+          flex: 2;
+      }
+      .social{
+        flex: 1;
+      }
+      /* .logo {
+        margin-right: auto;
+      } */
+      /* .nav a{
+          padding: 10px;
+          display: inline-block;
+      }
+      .nav,
+      .social {
+        padding: 0px;
+
+        font-size: 14px;
+      } */
+    </style>
+  </body>
+</html>

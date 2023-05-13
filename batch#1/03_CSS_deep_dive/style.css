@@ -1,0 +1,37 @@
+.container {
+  padding: 0px 20px;
+}
+
+.container .row {
+  margin: 0px -10px;
+}
+
+.container .row .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 330px;
+  text-align: center;
+  background-color: red;
+}
+
+.container .row .button span.icon-animated {
+  color: black;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  font-size: 48px;
+  height: 48px;
+  width: 48px;
+}
+
+.container .row .button:hover span.icon-animated {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+/*# sourceMappingURL=style.css.map */

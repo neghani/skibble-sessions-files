@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jquery</title>
+  </head>
+  <body>
+    <ul>
+      <li>One</li>
+      <li class="two"> two</li>
+      <li>three</li>
+      <li>four</li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    //   var elems = document.getElementsByTagName("li");
+    //   for (let index = 0; index < elems.length; index++) {
+    //     const elem = elems[index];
+    //     elem.onclick = () => {
+    //       console.log("Hey hey");
+    //     };
+    //   }
+
+        // $("ul>li").click(() => {
+        //   console.log("Hey hey");
+        // });
+
+
+        console.log($('ul').copy());
+    </script>
+  </body>
+</html>

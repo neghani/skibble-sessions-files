@@ -1,0 +1,6 @@
+.container {
+
+  background-image: linear-gradient( red , blue,green);
+  background-repeat: repeat;
+/* background:left/contain url(./images/hills.jpeg) no-repeat 200px; */
+}

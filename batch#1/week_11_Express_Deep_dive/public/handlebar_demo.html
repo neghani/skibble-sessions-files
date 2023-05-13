@@ -1,0 +1,17 @@
+<div id="todo">
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script>
+  // compile the template
+
+  var template = Handlebars.compile(
+    '<ul class="people_list">  {{#each people}}    <li>{{this}}</li>  {{/each}}</ul>'
+  );
+
+  document.getElementById('todo').innerHTML= template({
+    people: ["Yehuda Katz",  "Yehuda Katz", "Yehuda Katz", "Yehuda Katz","Yehuda Katz", "Alan Johnson", "Charles Jolley"],
+  });
+  // execute the compiled template and print the output to the console
+  //   console.log(template({ doesWhat: "rocks!" }));
+</script>

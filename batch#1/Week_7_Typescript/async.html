@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async</title>
+  </head>
+  <body>
+    <script>
+      //   function f1() {
+      //     console.log("from 1");
+      //   }
+      //   function f2() {
+      //    setTimeout(()=>{
+      //     console.log("from 2");
+      //    },3000)
+      //   }
+      //   function f3() {
+      //     console.log("from 3");
+      //   }
+
+      //   f1();
+      //   f2();
+      //   f3();
+
+      var shopIsOpen = true;
+      var flowerStock = true;
+
+      let getFlowers = new Promise((resolve, reject) => {
+        setTimeout(() => {
+        
+          if (shopIsOpen && flowerStock) {
+            resolve('flowers....');
+          } else {
+            reject();
+          }
+        }, 1000);
+      });
+
+      getFlowers.then(
+        (res) => {
+          console.log(res);
+        }
+      ).catch(()=>{
+          console.log('oh noo... something went wrong')
+      });
+
+      console.log("Hey I am cooking....");
+    </script>
+  </body>
+</html>

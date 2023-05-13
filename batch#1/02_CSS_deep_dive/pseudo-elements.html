@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sizes</title>
+  </head>
+  <body>
+    <ul class="markDemo">
+      <li>Fist</li>
+      <li>Second</li>
+      <li>Third</li>
+    </ul>
+    <div class="intro">Test</div>
+    <div class="intro2">Test asdfasdf asdf </br> asdfads</div>
+    <!-- 
+Pseudo Elements
+Pseudo Classes
+Introduction SCSS -->
+
+    <style>
+      /* .intro::before {
+        content: " ";
+        width: 20px;
+        height: 30px;
+        background: center/20px 20px
+          url(https://cdn-icons-png.flaticon.com/512/190/190411.png) no-repeat;
+        padding: 10px 20px;
+      } */
+     ::marker {
+        color: red;
+      }
+      ::selection {
+        color: white;
+        background-color: green;
+      }
+      .intro {
+        font-size: 20px;
+        margin: 30px;
+      }
+      .intro::first-letter {
+        color: hsl(0, 100%, 50%);
+        font-size: 100px;
+      }
+
+      .intro2::first-line{
+          background-color: red;
+          color: white;
+      }
+    </style>
+  </body>
+</html>
